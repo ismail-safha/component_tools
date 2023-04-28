@@ -1,0 +1,107 @@
+.content {
+  position: relative;
+}
+
+.image {
+  height: 500px;
+}
+.image img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.content .title-info {
+  background-color: bisque;
+  margin: 0 auto;
+  padding: 0 40px 5vw 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.content .title-info .price {
+  position: relative;
+  font-size: 30px;
+  width: 80px;
+  height: 80px;
+  margin-top: -40px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* == */
+.title {
+  font-size: clamp(30px, -0.875em + 8.333vw, 40px);
+}
+
+.title-info :where(span, h3, .button) {
+  transform: translateY(30px);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.75s, opacity 0.75s, visibility 0.75s;
+}
+
+.swiper-slide-active .title-info :where(span, h3, .button) {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.swiper-slide-active .title-info h3 {
+  transition-delay: 0.5s;
+}
+.swiper-slide-active .title-info .button {
+  transition-delay: 0.75s;
+}
+/* == */
+
+/* === */
+.custom-pagination {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  bottom: 50%;
+}
+.custom-pagination .swiper-pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+.swiper-pagination-bullet {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  opacity: 1;
+  background-color: transparent;
+}
+
+.swiper-pagination-bullet::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 50%;
+  left: 50%;
+  background-color: #000;
+  border: 1px solid #000;
+  border-radius: 50%;
+  transform: translate(-50%, 50%);
+  transition: width 0.2s, height 0.2s transform 0.2s;
+}
+.swiper-pagination-bullet-active::before {
+  background-color: transparent;
+  width: 15px;
+
+  height: 15px;
+}
