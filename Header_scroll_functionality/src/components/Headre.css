@@ -1,0 +1,23 @@
+.mainHeader {
+  padding: 12px 18px;
+  background: rgb(58, 15, 253);
+  color: #fff;
+  text-align: center;
+}
+.main-block {
+  padding: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+.fixedTop {
+  width: 100%;
+  padding: 12px 18px;
+  position: fixed;
+  top: 0;
+
+  background: rgb(94, 50, 91);
+}
+.fixedTop + .main-block {
+  padding-top: 102px;
+}
