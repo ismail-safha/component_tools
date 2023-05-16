@@ -1,0 +1,12 @@
+.upload {
+  display: flex;
+  justify-content: center;
+  background: #000;
+  height: 100vh;
+}
+.upload .upload_1 {
+  width: 500px;
+  background: #fff;
+  margin-top: 20px;
+  padding: 20px;
+}
